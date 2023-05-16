@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h2 class="text-center mt-4">All episodes available</h2>
+    <table class="table table-hover mt-4">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Episode</th>
+                <th scope="col">Date</th>
+                <th scope="col">URL</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let dataInfo of data">
+            <tr>
+                <th scope="row"> {{dataInfo.id}} </th>
+                <td> {{dataInfo.name}} </td>
+                <td> {{dataInfo.episode}} </td>
+                <td> {{dataInfo.air_date}} </td>
+                <td> {{dataInfo.url}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

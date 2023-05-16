@@ -1,0 +1,52 @@
+button {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: calc(1.25rem);
+  width: 4rem;
+  height: 4rem;
+  border-style: none;
+  border-radius: 50%;
+  font-size: 45px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+  background-color: #6c757d;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+button:hover {
+  color: #375a7f;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 540px) {
+  button {
+    width: 2rem;
+    height: 2rem;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  button {
+    width: 4rem;
+    height: 4rem;
+    font-size: 45px;
+  }
+}

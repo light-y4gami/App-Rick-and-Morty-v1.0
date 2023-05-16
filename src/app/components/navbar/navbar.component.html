@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg text-bg-secondary p-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/logo-rick-and-morty.png" alt="Logo Rick and Morty">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+      aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto justify-content-center">
+        <li class="nav-item">
+          <a [ngClass]="{'navbar-link': true, 'active' : activeLink === 'home'}" (click)="setActiveLink('home')"
+            class="nav-link " href="#">Home
+            <span class="visually-hidden"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [ngClass]="{'navbar-link': true, 'active': activeLink === 'characters'}"
+            (click)="setActiveLink('characters')" class="nav-link" routerLink="characters">Characters</a>
+        </li>
+        <li class="nav-item">
+          <a [ngClass]="{'navbar-link': true, 'active': activeLink === 'episodes'}" (click)="setActiveLink('episodes')"
+            class="nav-link" routerLink="episode">Episodes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://rickandmortyapi.com/" target="_blank" rel="noopener noreferrer">API</a>
+        </li>
+        <li class="nav-item">
+          <a [ngClass]="{'navbar-link': true, 'active': activeLink === 'about'}" (click)="setActiveLink('about')"
+            class="nav-link" routerLink="about">About us</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <ul class="social navbar-nav me-auto">
+          <li class="icons"><a href="https://www.instagram.com/systemf4iled/" target="_blank"
+              rel="noopener noreferrer"><i class="bi bi-instagram"></i></a></li>
+          <li class="icons"><a href="https://twitter.com/lighty4gami1" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-twitter"></i></a></li>
+          <li class="icons"><a href="http://tiktok.com/@systemf4iled" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-tiktok"></i></a></li>
+          <li class="icons"><a href="https://t.me/desarrollofront3nd" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-telegram"></i></a></li>
+          <li class="icons"><a href="https://github.com/light-y4gami" target="_blank" rel="noopener noreferrer"><i
+                class="bi bi-github"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

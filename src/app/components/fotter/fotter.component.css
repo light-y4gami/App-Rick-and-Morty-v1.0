@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300&family=Satisfy&display=swap');
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu-footer > h6 a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-footer > h6 a:hover {
+  color: #fff;
+}
+
+.footer-container {
+  background-color: #EFEFF6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23d5d7de' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23bbbec6' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23a0a6ad' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23868d95' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%236C757D' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.hovered > i {
+  font-size: 25px;
+  color: #222;
+}
+
+.hovered > i:hover {
+  color: #fff;
+}
+
+.copyright {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.copyright a {
+  color: #fff;
+  text-decoration: none;
+}

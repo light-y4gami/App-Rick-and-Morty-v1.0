@@ -1,0 +1,18 @@
+.carousel {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  max-height: 490px;
+  object-fit: cover;
+}
+
+.carousel-inner{
+  height: 400px;
+}

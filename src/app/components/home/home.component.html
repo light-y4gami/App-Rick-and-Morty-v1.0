@@ -1,0 +1,75 @@
+<app-carousel-slide></app-carousel-slide>
+<h2 class="text-center mt-4">Explore the adventures of Rick and Morty</h2>
+<div class="container-fluid row row-cols-2 row-cols-md-2 g-4 mt-2">
+  <div *ngFor="let character of charactersDefault" class="card col-md-3 mb-4 p-0" style="width: 20rem;">
+    <img *ngIf="character?.image" [src]="character.image" class="card-img-top " [alt]="character?.name">
+    <div class="card-body">
+      <h5 class="card-title">{{character.name}}</h5>
+      <p class="card-text characterLimit">{{character.characterization}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Specie: {{character.specie}}</li>
+      <li class="list-group-item">Status: {{character.status}} <i class="bi bi-circle-fill"
+          [ngClass]="character.status === 'Alive' ? 'text-success' : 'text-danger'" style="font-size: 13px;"></i></li>
+      <li class="list-group-item">Gender: {{character.gender}}</li>
+      <li class="list-group-item characterLimit">Origin: {{character.origin}}</li>
+      <li class="list-group-item characterLimit">Location: {{character.location}}</li>
+      <li class="list-group-item">Created: {{ formatDate(character.created) }}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">
+        <i class="bi bi-plus-circle"></i>
+        Read more
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+  <h3 class="mt-4 title-font">Rick and Morty</h3>
+  <p class="paragr">
+    Rick and Morty is an American adult animated television series created by Justin Roiland and Dan Harmon in 2013 for
+    Adult Swim, it also aired on Cartoon Network.
+    The series follows the misadventures of a scientist, Rick Sanchez, and his easily influenced grandson, Morty, who
+    balance their time between domestic life and space, time and intergalactic travel.
+    Dan Harmon, the co-creator of the series and Justin Roiland are responsible for the main voices of Morty and Rick,
+    the series also includes the voices of Chris Parnell, Spencer Grammer and Sarah Chalke.
+    The series originated from a scrappy short animated by Roiland for the Channel 101 film festival called Doc and
+    Mharti, a parody of the main leads from Back to the Future.
+    When Harmon was fired by NBC in 2013 over arguments between him and the executives of the series he had created,
+    Community, he and Roiland developed a series based on characters already created by Roiland.
+    The sixth season premiered on September 4, 2022, and consists of ten episodes.
+    A seventh season was confirmed as part of a long-term deal with Cartoon Network that ordered 70 new episodes, which
+    renewed the series for a tenth season.
+    Adult Swim cut ties with Justin Roiland in 2023 amid allegations of gender-based violence and announced that he
+    would reprise his roles.
+  </p>
+  <h3 class="mt-4 title-font">Story lines</h3>
+  <p class="paragr">
+    Rick Sanchez is an example of the typical "mad scientist." He's a genius, but he's irresponsible, alcoholic,
+    selfish, a bit depressed, and lacking in sanity.
+    Rick, for different reasons, ends up moving to his daughter's house, Beth's, and at that moment he meets his
+    grandson, Morty's; a 14-year-old boy, shy and not very bright.
+    Teaming up with his grandson, Rick and Morty go on a variety of adventures throughout the cosmos and parallel
+    universes. And it is through so many experiences and reflections
+    that Rick wants his grandson Morty not to end up like his father, Jerry, a very unsuccessful man who, despite having
+    good intentions, turns out to be quite useless on many occasions and depends a lot on his wife, Beth, Rick's
+    daughter.
+  </p>
+  <p class="paragr">
+    Despite being very close, Rick and his grandson experience moments where Morty's sister Summer sometimes joins in on
+    Rick's quaint adventures.
+  </p>
+  <h3 class="mt-4 title-font">Writing</h3>
+  <p class="paragr">
+    The general formula in Rick and Morty consists of the juxtaposition of two scenarios that come together.
+    On the one hand, it shows the adventures that an extremely selfish and alcoholic grandfather lives through
+    the vast and unknown intergalactic or interdimensional space, which drags his grandson to travel with him.
+    These adventures are interspersed in each episode with family domestic dramas more typical of the sitcom genre.
+    Dan Harmon describes this fusion of science fiction and family atmosphere as a mixture of influences between the two
+    works of Matt Groening:
+    The Simpsons and Futurama. On the other hand, co-author Justin Roiland communicated the intention of the creators
+    that the series surpass the traditional
+    continuity on television, thus opting for discontinuous storylines, "not fixed by rules". Roiland describes each
+    episode as "his own point of view of him" of him.
+  </p>
+</div>

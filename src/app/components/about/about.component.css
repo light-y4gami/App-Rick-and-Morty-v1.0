@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+h2 h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #ff6600;
+}
+
+a:hover {
+  color: #6c757d;
+}
+
+img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}

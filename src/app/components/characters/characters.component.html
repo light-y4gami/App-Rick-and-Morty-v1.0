@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <h2 class="text-center mt-4 title">Do a search for your favorite character</h2>
+    <div class="input-group mb-3">
+        <input [(ngModel)]="searchInformation" (keyup.enter)="performSearch($event)" type="text"
+            class="form-control focus-ring focus-ring-light border" placeholder="Search for a character"
+            aria-label="Search for a character" aria-describedby="button-addon2">
+        <button (click)="performSearch($event)" class="btn" type="button" id="button-addon2">Search</button>
+    </div>
+
+    <div class="container-fluid row row-cols-2 row-cols-md-2 g-4 mt-2">
+        <ng-container *ngIf="displayCharacters.length > 0; else noResults">
+            <div *ngFor="let character of displayCharacters" class="card col-md-3 mb-4 p-0" style="width: 20rem;">
+                <img [src]="character.image" class="card-img-top" [alt]="character.name">
+                <div class="card-body">
+                    <h5 class="card-title ">{{ character.name }}</h5>
+                    <br>
+                    <hr>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Specie: {{ character.specie }}</li>
+                        <li class="list-group-item">Status: {{ character.status }} <i
+                                [ngClass]="character.status === 'Alive' ? 'bi bi-circle-fill text-success' : 'bi bi-circle-fill text-danger'"></i>
+                        </li>
+                        <li class="list-group-item">Gender: {{ character.gender }}</li>
+                        <li class="list-group-item characterLimit">Origin: {{ character.origin }}</li>
+                        <li class="list-group-item characterLimit">Location: {{ character.location }}</li>
+                        <li class="list-group-item characterLimit border-bottom border-black">Created: {{
+                            character.created }}</li>
+                    </ul>
+                    <div class="card-body text-center">
+                        <a routerLink="" class="card-link">
+                            <i class="bi bi-plus-circle"></i>
+                            Read more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #noResults>
+            <div class="nofound mt-4 d-flex justify-content-center">
+                <h4 class="text-center">No results found</h4>
+                <img src="../../../assets/file-not-found.png" alt="file no found">
+            </div>
+        </ng-template>
+    </div>
+</div>
